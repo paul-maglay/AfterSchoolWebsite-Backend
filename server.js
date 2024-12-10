@@ -77,6 +77,16 @@ app.delete('/collection/:collectionName/:id',(req,res,next) =>{
         }
     )
 })
+
+function logger(req, res, next) {
+    const currentTime = new Date().toISOString();
+    console.log(`[${currentTime}] ${req.method} ${req.url}`);
+    next(); // Pass control to the next middleware or route handler
+}
+
+app.use(logger);
+
+
 /**app.listen(3000, () =>{
     console.log('Express.js server running at localhost:3000')
 
