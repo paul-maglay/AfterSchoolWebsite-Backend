@@ -89,7 +89,7 @@ var imageLocation = path.resolve(__dirname, "images");
 app.use(express.static(imageLocation)); 
 app.use(function(request, response) { 
 response.writeHead(200, { "Content-Type": "text/plain" }); 
-response.end("Looks like you didn't find a static file."); 
+response.end("No static file was found with that name."); 
 });
 
 
