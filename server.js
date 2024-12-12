@@ -85,6 +85,15 @@ app.delete('/collection/:collectionName/:id',(req,res,next) =>{
         }
     )
 })
+app.post('/log', (req, res) => {
+    const { message } = req.body;
+    if (message) {
+        console.log(`[Client Log] ${message}`);
+        res.status(200).send({ status: 'Logged successfully' });
+    } else {
+        res.status(400).send({ error: 'No message provided' });
+    }
+});
 var imageLocation = path.resolve(__dirname, "images"); 
 app.use(express.static(imageLocation)); 
 app.use(function(request, response) { 
