@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "da92bc2f-f547-488f-8ee1-6d57fb3c6f1b",
+		"name": "AfterSchool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39767293"
+	},
+	"item": [
+		{
+			"name": "Retrieve Collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://afterschoolwebsite-backend.onrender.com/collection/lessons/",
+					"protocol": "https",
+					"host": [
+						"afterschoolwebsite-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"collection",
+						"lessons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"bob\",\r\n    \"userPhone\":12345678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://afterschoolwebsite-backend.onrender.com/collection/orders",
+					"protocol": "https",
+					"host": [
+						"afterschoolwebsite-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"collection",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"bobby\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://afterschoolwebsite-backend.onrender.com/collection/orders/675a84d5a4feb5004ee70a21",
+					"protocol": "https",
+					"host": [
+						"afterschoolwebsite-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"collection",
+						"orders",
+						"675a84d5a4feb5004ee70a21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://afterschoolwebsite-backend.onrender.com/collection/orders/675a84d5a4feb5004ee70a21",
+					"protocol": "https",
+					"host": [
+						"afterschoolwebsite-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"collection",
+						"orders",
+						"675a84d5a4feb5004ee70a21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
