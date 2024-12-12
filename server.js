@@ -23,6 +23,13 @@ let db;
 MongoClient.connect('mongodb+srv://paulmaglay:twHfEqpFFJTKkJxu@cluster0.1wurb.mongodb.net', (err,client) =>{
     db = client.db('afterschool')
 })
+function logger(req, res, next) {
+    const currentTime = new Date().toISOString();
+    console.log(`[${currentTime}] ${req.method} ${req.url}`);
+    next(); // Pass control to the next middleware or route handler
+}
+
+app.use(logger);
 //display message for root path to show that API is working
 app.get('/',(req,res,next)=>{
     res.send("Select a collection, e.g., /collection/messages")
@@ -77,14 +84,14 @@ app.delete('/collection/:collectionName/:id',(req,res,next) =>{
         }
     )
 })
+var imageLocation = path.resolve(__dirname, "images"); 
+app.use(express.static(imageLocation)); 
+app.use(function(request, response) { 
+response.writeHead(200, { "Content-Type": "text/plain" }); 
+response.end("Looks like you didn't find a static file."); 
+});
 
-function logger(req, res, next) {
-    const currentTime = new Date().toISOString();
-    console.log(`[${currentTime}] ${req.method} ${req.url}`);
-    next(); // Pass control to the next middleware or route handler
-}
 
-app.use(logger);
 
 
 /**app.listen(3000, () =>{
