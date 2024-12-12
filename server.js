@@ -1,5 +1,6 @@
 //Create Express.js instance
 var express = require("express")
+var path = require ('path')
 const app = express()
 
 //configuring Express.js
