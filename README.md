@@ -1,7 +1,7 @@
 # AfterSchoolWebsite-Backend
 
-#Submitted By Paul Merrick Escubio Maglay
-#MISIS Number : M01037100
+Submitted By Paul Merrick Escubio Maglay
+MISIS Number : M01037100
 
 
 
